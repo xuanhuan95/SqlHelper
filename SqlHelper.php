@@ -109,7 +109,7 @@ class SqlHelper extends \System\Model
 	 * @param Array,String  $condition 'id = abc' or array( array('key'=>key,'operator'=>operator,'value'=>value) )
 	 * @param String 		$table
 	 */
-	public function update( $data = array(), $condition = '', $table = '')
+	public function updateItem( $data = array(), $condition = '', $table = '')
 	{
 		$tableTemp = $this->checkTableNameNotNull($table);
 
@@ -126,7 +126,7 @@ class SqlHelper extends \System\Model
 	 * @param Array,String $condition
 	 * @param String 	   $table
 	 */
-	public function delete($condition = '',$table = '')
+	public function deleteItem($condition = '',$table = '')
 	{
 		$tableTemp = $this->checkTableNameNotNull($table);
 
