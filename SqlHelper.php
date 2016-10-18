@@ -52,7 +52,7 @@ class SqlHelper extends \System\Model
 	 * @param Object 		$obj
 	 * @param Array,String  $condition
 	 */
-	public function checkCondition( $obj = '', $condition = '')
+	private function checkCondition( $obj = '', $condition = '')
 	{
 		if ( !is_object($obj) ) {
 			throw new \Exception('Type of first param must be Object!');
@@ -200,6 +200,7 @@ class SqlHelper extends \System\Model
 			if ( !array_key_exists('field',$sort) ) {
 				throw new Exception("Array require field key and value not NULL");
 			}
+
 			$sortType = isset($sort['type']) ? $sort['type'] : false;
 
 			$items = $items->order_by($sort['field'],$sortType);
@@ -214,7 +215,7 @@ class SqlHelper extends \System\Model
 	 * @param Array $data
 	 * @param Array $format
 	 */
-	public function formatData($data = '', $format = '')
+	public function formatData( $data = array(), $format = array() )
 	{
 		# code...
 	}
